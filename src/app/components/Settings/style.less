@@ -1,0 +1,50 @@
+.Settings {
+  width: 100%;
+  padding: 1rem;
+
+  &-section {
+    margin-bottom: 3rem;
+
+    &-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    &-help {
+      font-size: 0.75rem;
+      margin-top: -0.5rem;
+      opacity: 0.6;
+    }
+
+    // Ant overrides
+    .ant-form-item {
+      margin-bottom: 0.5rem;
+    }
+
+    .ant-form-item-label label {
+      font-weight: 600;
+      opacity: 0.7;
+    }
+  }
+
+  &-currencies {
+    .ant-checkbox-wrapper {
+      display: block;
+      margin: 0.5rem 0 0 0;
+    }
+  }
+
+  // Ant overrides
+  .ant-form-item-control-wrapper &-input-group.ant-input-group {
+    display: flex;
+
+    .ant-input {
+      flex-grow: 8;
+    }
+
+    .ant-btn {
+      flex-grow: 1;
+    }
+  }
+  
+}

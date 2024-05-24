@@ -1,0 +1,115 @@
+@import '~style/variables.less';
+
+.ChannelRow {
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(#000, 0.08);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &.is-clickable:hover {
+    cursor: pointer;
+  }
+
+  &-avatar {
+    position: relative;
+    flex-shrink: 0;
+    width: 3.4rem;
+    height: 3.4rem;
+    margin-right: 1rem;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+
+      .anticon {
+        font-size: 1.6rem;
+      }
+    }
+
+    &-status,
+    &-private {
+      position: absolute;
+      bottom: 0.1rem;
+      width: 0.9rem;
+      height: 0.9rem;
+      border-radius: 100%;
+      box-shadow: 0 0 0 3px #fff;
+    }
+
+    &-status {
+      right: 0.1rem;
+
+      &.is-open {
+        &.is-active {
+          background: @success-color;
+        }
+        &.is-inactive {
+          background: @error-color;
+        }
+      }
+
+      &.is-closing,
+      &.is-opening,
+      &.is-waiting,
+      &.is-force-closing {
+        background: @warning-color;
+      }
+    }
+
+    &-private {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 0.1rem;
+      background: #666;
+
+      .anticon {
+        color: #fff;
+        font-size: 0.65rem;
+      }
+    }
+  }
+
+  &-info {
+    flex: 1;
+    min-width: 0;
+
+    &-alias {
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-bottom: 0.1rem;
+    }
+
+    &-pubkey {
+      font-size: 0.65rem;
+      margin-bottom: 0.15rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-balance {
+      font-size: 0.7rem;
+      opacity: 0.8;
+    }
+
+    &-progress {
+      width: 100%;
+      height: 4px;
+      background-color: rgba(#000, 0.04);
+      border-radius: 2px;
+      margin-top: 0.4rem;
+
+      &-inner {
+        height: 100%;
+        background-color: rgba(#000, 0.25);
+        border-radius: 2px;
+        opacity: 0.7;
+      }
+    }
+  }
+}

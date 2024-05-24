@@ -1,0 +1,121 @@
+@import '~style/variables.less';
+
+.Template {
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  
+  &-header,
+  &-content {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  &-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: @header-height;
+    padding: 0 1.25rem;
+    background: #FFF;
+    border-bottom: 1px solid rgba(#000, 0.15);
+    z-index: 1000;
+
+    &.is-hidden {
+      display: none;
+    }
+
+    &-icon {
+      height: 1.5rem;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    &-back {
+      font-size: 1rem;
+    }
+
+    &-title {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      letter-spacing: 0.05rem;
+      transform: translateY(-1px);
+    }
+
+    &-alpha {
+      color: #FFF;
+      font-size: 0.6rem;
+      padding: 0.2rem 0.5rem;
+      letter-spacing: 0.05rem;
+      border-radius: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #000;
+      border: 1px solid #000;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    &-menu {
+      margin-right: -0.4rem;
+    }
+  }
+
+  &-headerPlaceholder {
+    height: @header-height;
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  &-content {
+    background: #FBFBFB;
+  }
+
+  // Full page styles
+  @media (min-width: 500px) {
+    padding: 1rem 2rem;
+
+    &-inner {
+      border: 1px solid rgba(#000, 0.15);
+      box-shadow: 0 10px 20px rgba(#000, 0.18);
+    }
+
+    &-header,
+    &-content {
+      max-width: 680px;
+    }
+
+    &-header {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+    }
+
+    &-headerPlaceholder {
+      display: none;
+    }
+
+    &-content {
+      height: calc(100vh - 6rem);
+      min-height: 400px;
+      overflow: auto;
+    }
+  }
+}

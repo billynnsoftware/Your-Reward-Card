@@ -1,0 +1,53 @@
+.UploadMacaroons {
+  &-description {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+  }
+
+  &-toggle {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin: 1rem 0 1rem;
+    text-align: center;
+  }
+
+  &-hint {
+    text-align: center;
+    font-size: 0.6rem;
+    opacity: 0.6;
+    margin: 1.5rem 0 1rem;
+  }
+
+  &-error {
+    margin-bottom: 1rem;
+  }
+
+  .ant-upload.ant-upload-drag {
+    padding: 0.6rem 0 0.4rem;
+    margin-bottom: 1rem;
+
+    // Must target these specifically due to table shenanigans in firefox
+    .ant-upload-drag-icon,
+    .ant-upload-text,
+    .ant-upload-hint {
+      text-align: center;
+    }
+
+    .ant-upload-btn {
+      padding: 0;
+    }
+
+    .ant-upload-drag-icon {
+      margin-bottom: 0.4rem;
+
+      .anticon {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .ant-form-item {
+    margin-bottom: 0.5rem;
+  }
+}

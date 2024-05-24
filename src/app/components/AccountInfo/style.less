@@ -1,0 +1,75 @@
+@import '~style/variables.less';
+
+.AccountInfo {
+  padding: 1rem 1.25rem 0.75rem;
+  position: relative;
+
+  &-top {
+    display: flex;
+    margin-bottom: 1rem;
+
+    &-avatar {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 1rem;
+      border-radius: 100%;
+      overflow: hidden;
+      cursor: pointer;
+      .is-loading & {
+        background: #eee;
+      }
+    }
+
+    &-info {
+      &-alias {
+        margin-top: -0.2rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      &-balance {
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+
+        .Unit-secondary {
+          padding-left: 0.3rem;
+          opacity: 0.7;
+        }
+
+        &-pending {
+          margin-left: 0.5rem;
+          color: @warning-color;
+        }
+      }
+
+      &-balances {
+        display: flex;
+        font-size: 0.7rem;
+        opacity: 0.6;
+
+        > * {
+          margin-right: 0.75rem;
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ant-btn {
+      flex: 1;
+      margin-right: 0.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es6",
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "outDir": "dist/tsc_output",
+    "sourceMap": true,
+    "strict": true,
+    "noEmitOnError": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "skipLibCheck": true,
+    "lib": ["dom", "es2017"],
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["./src/app/components/*"],
+      "lib/*": ["./src/app/lib/*"],
+      "modules/*": ["./src/app/modules/*"],
+      "pages/*": ["./src/app/pages/*"],
+      "prompts/*": ["./src/app/prompts/*"],
+      "static/*": ["./src/app/static/*"],
+      "store/*": ["./src/app/store/*"],
+      "style/*": ["./src/app/style/*"],
+      "typings/*": ["./src/app/typings/*"],
+      "utils/*": ["./src/app/utils/*"]
+    }
+  },
+  "include": ["src", "webpack.config.ts"]
+}
